@@ -1,18 +1,21 @@
 <script>
-  let count = 0;
-  // let string = `You have clicked ${count} times.`;
-  $: string = `You have clicked ${count} times.`;
+  let count1 = 0;
+  let count2 = 0;
 
-  $: if (count > 5) {
-    console.log(`The count is ${count}`);
+  function setCount2(x) {
+    count2 = x;
   }
 
-  function increment() {
-    count += 1;
+  $: setCount2(count1);
+  $: string = `Count2 is ${count2}.`;
+
+  function increment1() {
+    count1 += 1;
   }
 </script>
 
-<button on:click={increment}>Clicks {count}</button>
+<button on:click={increment1}>Clicks {count1}</button>
+
 <h3>{string}</h3>
 
 <style>
