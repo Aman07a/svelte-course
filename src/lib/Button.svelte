@@ -12,5 +12,8 @@
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    /* &:hover {
+      background-color: variables.$color;
+    } */
   }
 </style>
