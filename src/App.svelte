@@ -1,7 +1,7 @@
 <script>
-  import TodoList from "./lib/TodoList.svelte";
-  import { v4 as uuid } from "uuid";
-  import { tick } from "svelte";
+  import TodoList from './lib/TodoList.svelte';
+  import { v4 as uuid } from 'uuid';
+  import { tick } from 'svelte';
 
   let todoList;
   let showList = true;
@@ -9,23 +9,23 @@
   let todos = [
     {
       id: uuid(),
-      title: "Todo 1",
+      title: 'Todo 1',
       completed: true
     },
     {
       id: uuid(),
-      title: "Todo 2",
+      title: 'Todo 2',
       completed: false
     },
     {
       id: uuid(),
-      title: "Todo 3",
+      title: 'Todo 3',
       completed: true
     },
     {
       id: uuid(),
       title:
-        "A long long long long long long long long long long long long long long long long long long todo",
+        'A long long long long long long long long long long long long long long long long long long todo',
       completed: false
     }
   ];

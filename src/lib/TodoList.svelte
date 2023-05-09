@@ -1,9 +1,9 @@
 <svelte:options immutable={true} />
 
 <script>
-  import Button from "./Button.svelte";
-  import { createEventDispatcher, afterUpdate } from "svelte";
-  import FaRegTrashAlt from "svelte-icons/fa/FaRegTrashAlt.svelte";
+  import Button from './Button.svelte';
+  import { createEventDispatcher, afterUpdate } from 'svelte';
+  import FaRegTrashAlt from 'svelte-icons/fa/FaRegTrashAlt.svelte';
 
   afterUpdate(() => {
     if (autoscroll) listDiv.scrollTo(0, listDivScrollHeight);
@@ -12,7 +12,7 @@
 
   export let todos = [];
   let prevTodos = todos;
-  let inputText = "";
+  let inputText = '';
   let input, listDiv, autoscroll, listDivScrollHeight;
 
   const dispatch = createEventDispatcher();
@@ -23,7 +23,7 @@
   }
 
   export function clearInput() {
-    inputText = "";
+    inputText = '';
   }
   export function focusInput() {
     input.focus();
@@ -31,29 +31,29 @@
 
   function handleAddTodo() {
     const isNotCancelled = dispatch(
-      "addtodo",
+      'addtodo',
       {
-        title: inputText,
+        title: inputText
       },
       {
-        cancelable: true,
+        cancelable: true
       }
     );
     if (isNotCancelled) {
-      inputText = "";
+      inputText = '';
     }
   }
 
   function handleRemoveTodo(id) {
-    dispatch("removetodo", {
-      id,
+    dispatch('removetodo', {
+      id
     });
   }
 
   function handleToggleTodo(id, value) {
-    dispatch("toggletodo", {
+    dispatch('toggletodo', {
       id,
-      value,
+      value
     });
   }
 </script>
