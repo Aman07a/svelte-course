@@ -10,33 +10,37 @@
     {
       id: uuid(),
       title: "Todo 1",
-      completed: true,
+      completed: true
     },
     {
       id: uuid(),
       title: "Todo 2",
-      completed: false,
+      completed: false
     },
     {
       id: uuid(),
       title: "Todo 3",
-      completed: true,
+      completed: true
     },
+    {
+      id: uuid(),
+      title:
+        "A long long long long long long long long long long long long long long long long long long todo",
+      completed: false
+    }
   ];
 
   async function handleAddTodo(event) {
     event.preventDefault();
-    console.log(document.querySelectorAll(".todo-list ul li"));
     todos = [
       ...todos,
       {
         id: uuid(),
         title: event.detail.title,
-        completed: false,
-      },
+        completed: false
+      }
     ];
     await tick();
-    console.log(document.querySelectorAll(".todo-list ul li"));
     todoList.clearInput();
   }
 
