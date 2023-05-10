@@ -1,13 +1,12 @@
 <script>
-  import Counter from "./lib/Counter.svelte";
+  import tippy from './lib/actions/tippy';
 
-  const props = {
-    maxCount: 10,
-    initialCount: 5,
-  };
+  let content = 'Hello';
 </script>
 
-<Counter {...props} x="y" />
+<input bind:value={content} />
+
+<button use:tippy={{ content, placement: 'right', theme: 'light' }}>Button</button>
 
 <style>
 </style>
