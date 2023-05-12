@@ -1,12 +1,29 @@
+<script context="module">
+  let totalButtons = 0;
+
+  export function getTotalButtons() {
+    return totalButtons;
+  }
+</script>
+
 <script>
+  import { onDestroy } from 'svelte';
+
   export let size = 'small';
   export let shadow = false;
   export let bgColor = 'inherit';
   export let textColor = 'inherit';
 
   let isLeftHovered;
+
+  totalButtons += 1;
+
+  onDestroy(() => {
+    totalButtons -= 1;
+  });
 </script>
 
+{totalButtons}
 <button
   on:click
   style:--buttonBgColor={bgColor}
