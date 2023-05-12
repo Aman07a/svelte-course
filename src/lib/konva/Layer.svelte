@@ -3,7 +3,7 @@
   import { getContext, onDestroy, setContext, createEventDispatcher } from 'svelte';
   import { stageKey, layerKey } from './context-keys';
 
-  //   export let draggable = undefined;
+  // export let draggable = undefined;
 
   const dispatch = createEventDispatcher();
 
