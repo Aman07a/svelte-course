@@ -1,6 +1,10 @@
-# create-svelte
+# svelte-course
+ <b>Svelte & SvelteKit: The Complete Guide</b>
+ 
+![svelte_and_sveltekit](https://user-images.githubusercontent.com/60389872/236749906-fe5fcb10-4d5d-46a4-8cb7-736d9456fed1.png)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+#### Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
 
