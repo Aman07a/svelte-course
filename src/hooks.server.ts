@@ -7,7 +7,7 @@ export const handle1: Handle = async ({ event, resolve }) => {
 	if (!url.pathname.startsWith('/api')) {
 		const token = cookies.get('token');
 
-		locals.user = token ? { name: 'John', id: 1 } : undefined;
+		locals.user = token ? { name: 'Aman', id: 1 } : undefined;
 	}
 
 	const response = await resolve(event);
