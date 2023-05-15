@@ -1,8 +1,8 @@
 import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
-export const GET: RequestHandler = async ({ fetch }) => {
-	const response = await fetch('https://dummyjson.com/products');
+export const GET: RequestHandler = async ({ fetch, locals }) => {
+	const response = await fetch('https://dummyjson.com/productss');
 
 	if (response.ok) {
 		const resJSON = await response.json();
