@@ -14,6 +14,13 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+# Build
+/build
+/.svelte-kit
+/package
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
 # Runtime data
 pids
 *.pid
@@ -143,8 +150,6 @@ dist
 .svelte-kit
 
 # Editor directories and files
-.vscode/*
-.vscode/**
 !.vscode/extensions.json
 .idea
 .DS_Store
