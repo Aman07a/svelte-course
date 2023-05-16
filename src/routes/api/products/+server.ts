@@ -13,14 +13,12 @@ export const GET: RequestHandler = async ({ fetch, locals }) => {
 	throw error(response.status, response.statusText);
 };
 
-export const POST: RequestHandler = async ({ request }) => {
-	const product = await request.json();
+// export const POST: RequestHandler = async ({ request }) => {
+// 	const product = await request.json();
 
-	if (!product.title) {
-		throw error(400, 'Product title is required!');
-	}
+// 	if (!product.title) {
+// 		throw error(400, 'Product title is required!');
+// 	}
 
-	return json({ id: 1313, title: product.title });
-};
-
-export const trailingSlash = 'never';
+// 	return json({ id: 1313, title: product.title });
+// };

@@ -14,4 +14,4 @@ export const load: PageServerLoad = async ({ fetch, depends, locals }) => {
 	throw error(response.status, errorJSON.message);
 };
 
-export const ssr = true;
+export const prerender = true;
