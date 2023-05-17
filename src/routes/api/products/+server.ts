@@ -2,7 +2,7 @@ import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { API_URL } from '$env/static/private';
 
-export const GET: RequestHandler = async ({ fetch, locals }) => {
+export const GET: RequestHandler = async ({ fetch }) => {
 	const response = await fetch(`${API_URL}/products?limit=6`);
 
 	if (response.ok) {
