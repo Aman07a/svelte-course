@@ -20,7 +20,7 @@
 				applyAction(result);
 			}
 			if (result.type === 'error') {
-				error = result.error.message;
+				error = result.error.message || 'An error occurred';
 			}
 			if (result.type === 'failure') {
 				form = result.data as ActionData;
